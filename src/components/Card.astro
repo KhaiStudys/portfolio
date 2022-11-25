@@ -1,0 +1,9 @@
+---
+const { title, desc, link } = Astro.props;
+---
+
+<div class="px-6 py-4 rounded border-2 flex flex-col gap-2">
+  <p class="text-xl font-bold">{title}</p>
+  <p>{desc}</p>
+  <a class="text-blue-500 underline" href={link}>Learn More</a>
+</div>
