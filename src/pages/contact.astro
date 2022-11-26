@@ -3,7 +3,62 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Khai Haidari - Contact">
-  <main class="mt-24">
-    <h1 class="text-3xl font-bold">Contact</h1>
+  <main class="mt-24 flex-col flex gap-8">
+    <div>
+      <h1 class="text-3xl font-bold mb-4">Contact</h1>
+      <p>
+        Send your messages through this form or email me at
+        <button id="email" class="underline text-blue-500"
+          >khaihaidari350@gmail.com</button
+        >.
+      </p>
+    </div>
+    <form class="flex flex-col gap-4">
+      <label class="flex flex-col gap-2"
+        >Name
+        <input
+          type="text"
+          name="Name"
+          id="name"
+          class="px-4 py-2 rounded border-2"
+        />
+      </label>
+      <label class="flex flex-col gap-2"
+        >Email Address
+        <input
+          type="email"
+          name="Email"
+          id="email"
+          class="px-4 py-2 rounded border-2"
+        />
+      </label>
+      <label class="flex flex-col gap-2"
+        >Message
+        <textarea
+          name="Name"
+          id="name"
+          rows="6"
+          class="px-4 py-2 rounded border-2"></textarea>
+      </label>
+      <button class="px-4 py-2 rounded bg-blue-500 text-white font-bold"
+        >Send</button
+      >
+    </form>
+    <div>
+      <p class="mb-4 font-bold">Follow me on social media</p>
+      <div class="flex gap-4">
+        <a>TikTok</a>
+        <a>Instagram</a>
+      </div>
+    </div>
   </main>
 </Layout>
+<script defer>
+  // Copy email address to clipboard
+  const email = document.getElementById("email");
+  function copyEmail() {
+    navigator.clipboard.writeText(email.innerText);
+    alert("Email Address Copied!");
+  }
+  email.addEventListener("click", copyEmail);
+</script>

@@ -1,0 +1,13 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Test Page - Khai Haidari">
+  <button id="button">Click Me</button>
+  <script>
+    function handleClick() {
+      console.log("button clicked!");
+    }
+    document.getElementById("button").addEventListener("click", handleClick);
+  </script>
+</Layout>
