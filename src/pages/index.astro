@@ -4,27 +4,34 @@ import Card from "../components/Card.astro";
 ---
 
 <Layout title="Khai Haidari">
-  <main class="mt-24 flex flex-col gap-8">
-    <div class="flex flex-col gap-4">
-      <p>Hey there &#128075,</p>
-      <h1 class="font-bold text-2xl leading-normal">
-        I am Khairullah Haidari or you can just call me Khai!
-      </h1>
-      <p>Dedicated student and a passionate soccer player.</p>
-    </div>
-    <div class="flex gap-4 items-center">
-      <a class="px-4 py-2 rounded bg-blue-400 text-white" href="/projects"
-        >Work Showcase</a
-      >
-      <a href="/resume">View Resume</a>
-    </div>
+  <main class="my-24 flex flex-col gap-8">
+    <section class="flex flex-col gap-8 max-w-[480px]">
+      <div class="flex flex-col gap-4">
+        <p>Hey there &#128075,</p>
+        <h1 class="font-bold text-2xl leading-normal">
+          I am Khairullah Haidari or you can just call me Khai!
+        </h1>
+        <p>Dedicated student and a passionate soccer player.</p>
+      </div>
+      <div class="flex gap-4 items-center">
+        <a class="px-4 py-2 rounded bg-blue-500 text-white" href="/projects"
+          >Work Showcase</a
+        >
+        <a href="/resume">View Resume</a>
+      </div>
+    </section>
+    <section class="mt-24">
+      <h2 class="text-2xl font-bold my-4">Projects</h2>
+      <div class="flex flex-col gap-4 md:flex-row">
+        <Card
+          title="Personal Website"
+          desc="The design and development process behind my personal website."
+          link="/projects/personal-website"
+        />
+        <div class="p-6 rounded border-2 flex flex-col gap-2">
+          <p class="text-xl font-bold">Coming Soon...</p>
+        </div>
+      </div>
+    </section>
   </main>
-  <section class="mt-24 flex flex-col gap-4">
-    <h2 class="text-2xl font-bold">Projects</h2>
-    <Card
-      title="Personal Website"
-      desc="The design and development process behind my personal website."
-      link="/projects/personal-website"
-    />
-  </section>
 </Layout>

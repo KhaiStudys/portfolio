@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Khai Haidari - Contact">
-  <main class="mt-24 flex-col flex gap-8">
+  <main class="my-24 flex-col flex gap-8">
     <div>
       <h1 class="text-3xl font-bold mb-4">Contact</h1>
       <p>
@@ -46,9 +46,13 @@ import Layout from "../layouts/Layout.astro";
     </form>
     <div>
       <p class="mb-4 font-bold">Follow me on social media</p>
-      <div class="flex gap-4">
-        <a>TikTok</a>
-        <a>Instagram</a>
+      <div class="flex gap-6">
+        <a href="https://www.tiktok.com" target="_blank" class="flex gap-2">
+          <img src="/icons/Tiktok.svg" alt="" /> TikTok</a
+        >
+        <a href="https://www.instagram.con" target="_blank" class="flex gap-2">
+          <img src="/icons/Instagram.svg" alt="" /> Instagram</a
+        >
       </div>
     </div>
   </main>
@@ -58,7 +62,8 @@ import Layout from "../layouts/Layout.astro";
   const email = document.getElementById("email");
   function copyEmail() {
     navigator.clipboard.writeText(email.innerText);
-    alert("Email Address Copied!");
+    email.innerText = "Copied, click to reavel again!";
   }
   email.addEventListener("click", copyEmail);
+  email.addEventListener("touchstart", copyEmail);
 </script>
