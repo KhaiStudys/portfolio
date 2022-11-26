@@ -10,6 +10,7 @@
 - Project Showcase Page - Designing in figma
 - Write a Blog for Your First Project ( Personal Website ) - Pending
 - For Desktop - Done
+- Implement Sticky Navbar
 
 ### **Elaborations**
 
