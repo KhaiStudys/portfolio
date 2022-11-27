@@ -9,8 +9,9 @@ import Layout from "../layouts/Layout.astro";
       <p>
         Send your messages through this form or email me at
         <button id="email" class="underline text-blue-500"
-          >khaihaidari350@gmail.com</button
-        >.
+          >Khaihaidari350@gmail.com
+        </button>
+        .
       </p>
     </div>
     <form class="flex flex-col gap-4">
@@ -59,11 +60,16 @@ import Layout from "../layouts/Layout.astro";
 </Layout>
 <script defer>
   // Copy email address to clipboard
+  let isCopied = false;
   const email = document.getElementById("email");
   function copyEmail() {
-    navigator.clipboard.writeText(email.innerText);
-    email.innerText = "Copied, click to reavel again!";
+    if (isCopied == false) {
+      isCopied = true;
+      navigator.clipboard.writeText(email.innerText);
+      email.innerText = "Copied, click to reavel again!";
+    } else if (isCopied == true) {
+      console.log("Changed back to email!");
+    }
   }
   email.addEventListener("click", copyEmail);
-  email.addEventListener("touchstart", copyEmail);
 </script>
