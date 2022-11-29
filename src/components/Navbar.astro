@@ -1,15 +1,26 @@
+---
+const navlinks = [
+  { name: "Home", path: "/" },
+  { name: "Contact", path: "/contact" },
+  { name: "Blog and Projects", path: "/blog-and-projects" },
+];
+---
+
 <div class="sticky top-0 py-3 bg-white">
   <nav class="flex items-center gap-4">
     <a href="/" class="py-2 px-3 rounded bg-blue-500 text-white font-bold">
-      Khai</a
-    >
-    <ul class="flex ga-4 mx-auto gap-4">
-      <li><a href="/">Home</a></li>
-      <li><a href="/contact">Contact</a></li>
+      Khai
+    </a>
+    <ul class="flex gap-4 ml-auto">
+      {
+        navlinks.map((link) => {
+          return (
+            <li>
+              <a href={link.path}>{link.name}</a>
+            </li>
+          );
+        })
+      }
     </ul>
-
-    <div class="cursor-not-allowed">
-      <img src="/icons/Menu.svg" alt="faild to load image!" />
-    </div>
   </nav>
 </div>
