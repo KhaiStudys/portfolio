@@ -1,0 +1,37 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Post from "../../components/Post.astro";
+---
+
+<Layout title="Khai Haidari - Projects">
+  <main class="my-24 flex-col flex gap-8">
+    <div>
+      <h1 class="text-3xl font-bold mb-2">Projects and Blog</h1>
+      <p>
+        All the projects I’ve worked on and completed so far as a student.
+        Browse through them and if a project interests you click the learn more
+        button for more details!
+      </p>
+    </div>
+    <div class="flex flex-col gap-4">
+      <Post
+        tag="project"
+        title="personal website"
+        desc="The design and development process behind my personal website."
+        link="/"
+      />
+      <Post
+        tag="Blog Post"
+        title="How a blog can help your website grow"
+        desc="Blogs are pretty powerful tools of growth. Just finished a project? Let your audience know about the BTS by writting a blog!"
+        link="/"
+      />
+      <Post
+        tag="project"
+        title="personal website"
+        desc="The design and development process behind my personal website."
+        link="/"
+      />
+    </div>
+  </main>
+</Layout>

@@ -1,0 +1,15 @@
+---
+const { tag, title, desc, link } = Astro.props;
+---
+
+<a
+  href={link}
+  class="border-2 flex flex-col gap-2 p-6 rounded-lg hover:border-blue-500"
+>
+  <p class="uppercase font-bold text-[10px] opacity-60">
+    #{tag}
+  </p>
+  <h1 class="capitalize text-2xl font-bold">{title}</h1>
+  <p class="opacity-60">{desc}</p>
+  <p class="underline text-blue-500">Learn More</p>
+</a>
